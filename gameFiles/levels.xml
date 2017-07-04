@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<levels>
+  <level id="mainLevel">
+    <object name="cuadrado12" type="cuadrado1" x="200" y="100" ></object>
+    <object name="keyboard" type="keyboard" x="0" y="0" ></object>
+    <object name="text0" type="title" x="300" y="300" ></object>
+    <object name="text1" type="door" x="1000" y="400" ></object>
+    <object name="text2" type="score" x="300" y="500" ></object>
+    <object name="fondo" type="fondo" x="0" y="0" z="-1"/>
+  </level>
+  <level id="game">
+    <object name="cuadrado12" type="cuadrado1" x="200" y="200" ></object>
+    <object name="keyboard" type="keyboard" x="0" y="0" ></object>
+    <object name="circuloSpawner" type="circuloSpawner" x="240" y="240"/>
+    <object name="barra" type="barra" x="0" y="0" z="200"/>
+    <object name="fondo" type="fondo" x="0" y="0" z="-1"/>
+    <object name="marcador" type="marcador" x="60" y="15" z="20"/>
+  </level>
+  <level id="loser">
+    <object name="text" type="loserMessage" x="400" y="200" ></object>
+    <object name="keyboard" type="keyboard" x="0" y="0" ></object>
+    <object name="fondo" type="fondo" x="0" y="0" z="-1"/>
+  </level>
+</levels>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <spritesheets>
+  <spritesheet name="cuadrado" >
+
+    <states>
+      <state name="Idle">
+        <layer name="Idle1"></layer>
+          
+      </state>
+      <state name="RebotaH" >
+        <layer name="RebotaH"></layer>
+         
+      </state>
+      
+      <state name="RebotaV">
+        <layer name="RebotaV"></layer>
+      </state>
+      
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="YS1"></frame>
+        <frame name="YS2"></frame>
+      </layer>
+      <layer name="RebotaH" x="0" y="0">
+        <!--<frame name="RH1"></frame>-->
+        <frame name="RH2"></frame>
+        <frame name="RH3"></frame>
+        <frame name="RH2"></frame>
+        <!--<frame name="RH1"></frame>-->
+        
+      </layer>
+      <layer name="RebotaV" x="0" y="0">
+        <!--<frame name="RV1"></frame>-->
+        <frame name="RV2"></frame>
+        <frame name="RV3"></frame>
+        <frame name="RV2"></frame>
+        <!--<frame name="RV1"></frame>-->
+        
+      </layer>
+    </layers>
+
+    <frames>
+      <frame name="YS1" code="vars.$dibujar(context,x,y,vars['$w'],vars['$h'],'yellow');" t='500'></frame>
+      <frame name="YS2" code="vars.$dibujar(context,x, y,vars['$w']-vars['$animation'],vars['$h']+vars['$animation'],'yellow');" t='500'></frame>
+
+      <frame name="RV1" code="vars.$dibujar(context,x,y,vars['$w']-vars['$animation'],vars['$w']+vars['$animation'],'yellow');" t='50'></frame>
+      <frame name="RV2" code="vars.$dibujar(context,x, y,vars['$w']-(vars['$animation']*4),vars['$h']+(vars['$animation']*4),'yellow');" t='50'></frame>
+      <frame name="RV3" code="vars.$dibujar(context,x, y,vars['$w']-(vars['$animation']*8),vars['$h']+(vars['$animation']*8),'yellow');" t='50'></frame>
+      
+      <frame name="RH1" code="vars.$dibujar(context,x,y,vars['$w']+vars['$animation'],vars['$w']-vars['$animation'],'yellow');" t='50'></frame>
+      <frame name="RH2" code="vars.$dibujar(context,x, y,vars['$w']+(vars['$animation']*4),vars['$h']-(vars['$animation']*4),'yellow');" t='50'></frame>
+      <frame name="RH3" code="vars.$dibujar(context,x, y,vars['$w']+(vars['$animation']*8),vars['$h']-(vars['$animation']*8),'yellow');" t='50'></frame>
+
+    </frames>
+
+
+  </spritesheet>
+  <spritesheet name="circulo1" >
+
+    <states>
+      <state name="Idle">
+        <layer name="Idle1"></layer>
+          
+      </state>
+      <state name="Dead">
+        <layer name="Dead1"></layer>
+         
+      </state>
+      
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="BC1"></frame>
+        <frame name="BC2"></frame>
+      </layer>
+      <layer name="Dead1" x="0" y="0">
+        <frame name="BCDead1"></frame>
+        <frame name="BCDead2"></frame>
+        <frame name="BCDead3"></frame>
+        <frame name="BCDead4"></frame>
+        
+      </layer>
+
+    </layers>
+
+    <frames>
+      <frame name="BC1" code="vars.$dibujar(context,x,y,vars['$w'],vars['$h'],'blue',1);" t='500'></frame>
+      <frame name="BC2" code="vars.$dibujar(context,x, y,vars['$w']-vars['$animation'],vars['$h']+vars['$animation'],'blue',1);" t='500'></frame>
+
+      <frame name="BCDead1" code="vars.$dibujar(context,x,y,vars['$w']-vars['$animation'],vars['$h']-vars['$animation'],'blue',1);" t='100'></frame>
+      <frame name="BCDead2" code="vars.$dibujar(context,x,y,vars['$w']-(vars['$animation']*3),vars['$h']-(vars['$animation']*3),'blue',1);" t='100'></frame>
+      <frame name="BCDead3" code="vars.$dibujar(context,x,y,vars['$w']-(vars['$animation']*6),vars['$h']-(vars['$animation']*6),'blue',1);" t='100'></frame>
+      <frame name="BCDead4" code="return;" t='10000'></frame>
+      
+    </frames>
+
+
+  </spritesheet>
+  <spritesheet name="circulo2" >
+
+    <states>
+      <state name="Idle">
+        <layer name="Idle1"></layer>
+          
+      </state>
+      <state name="Dead" flip="h">
+        <layer name="Dead1"></layer>
+         
+      </state>
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="RC1"></frame>
+        <frame name="RC2"></frame>
+      </layer>
+
+      <layer name="Dead1" x="0" y="0">
+        <frame name="RCDead1"></frame>
+        <frame name="RCDead2"></frame>
+        <frame name="RCDead3"></frame>
+        <frame name="RCDead4"></frame>
+      </layer>
+
+    </layers>
+
+    <frames>
+      <frame name="RC1" code="vars.$dibujar(context,x,y,vars['$w'],vars['$h'],'red',1);" t='500'></frame>
+      <frame name="RC2" code="vars.$dibujar(context,x, y,vars['$w']-vars['$animation'],vars['$h']+vars['$animation'],'red',1);" t='500'></frame>
+
+      <frame name="RCDead1" code="vars.$dibujar(context,x, y,vars['$w']+(vars['$animation']*4),vars['$h']+(vars['$animation']*4),'red',0.8);" t='100'></frame>
+      <frame name="RCDead2" code="vars.$dibujar(context,x, y,vars['$w']+(vars['$animation']*8),vars['$h']+(vars['$animation']*8),'red',0.5);" t='100'></frame>
+      <frame name="RCDead3" code="vars.$dibujar(context,x, y,vars['$w']+(vars['$animation']*16),vars['$h']+(vars['$animation']*16),'red',0.3);" t='100'></frame>
+      <frame name="RCDead4" code="return;" t='10000'></frame>
+    </frames>
+
+
+  </spritesheet>
+
+
+ <spritesheet name="barrita" >
+
+    <states>
+      <state name="IdleL">
+        <layer name="Idle1"></layer>
+          
+      </state>
+      <state name="IdleR" flip="h">
+        <layer name="Idle1"></layer>
+         
+      </state>
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="Barrita"></frame>
+      </layer>
+
+    </layers>
+
+    <frames>
+      <frame name="Barrita" code="vars.$dibujar(context,x,y,vars['$long']);" t='100'></frame>
+    </frames>
+
+
+  </spritesheet>
+  
+
+   <spritesheet name="loserMessage" >
+
+    <states>
+      <state name="IdleL">
+        <layer name="Idle1"></layer>
+          
+      </state>
+      <state name="IdleR" >
+        <layer name="Idle1"></layer>
+         
+      </state>
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="loser"></frame>
+      </layer>
+
+    </layers>
+
+    <frames>
+      <frame name="loser" code="context.textBaseline ='top';context.textAlign='center';context.font='20pt Verdana';context.fillStyle = '#FFF';context.fillText(vars['$text'],x,y);" t="0"></frame>
+    </frames>
+
+
+  </spritesheet>
+
+  <spritesheet name="marcador" >
+
+    <states>
+      <state name="Idle">
+        <layer name="Idle1"></layer>
+      </state>
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="marcador"></frame>
+      </layer>
+    </layers>
+
+    <frames>
+      <frame name="marcador" code="context.textBaseline ='top';context.textAlign='center';context.font='20pt Verdana';context.fillStyle = '#FFF';context.fillText(vars['$text'],x,y);" t="0"></frame>
+    </frames>
+  </spritesheet>
+
+    <spritesheet name="titulo" >
+
+    <states>
+      <state name="Idle">
+        <layer name="Idle1"></layer>
+      </state>
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="titulo"></frame>
+      </layer>
+    </layers>
+
+    <frames>
+      <frame name="titulo" code="context.textBaseline ='top';context.textAlign='center';context.font='40pt Impact';context.fillStyle = 'yellow';context.fillText(vars['$text'],x,y);" t="0"></frame>
+    </frames>
+  </spritesheet>
+
+
+     <spritesheet name="fondo" >
+
+    <states>
+      <state name="IdleL">
+        <layer name="Idle1"></layer>
+          
+      </state>
+      <state name="IdleR" >
+        <layer name="Idle1"></layer>
+         
+      </state>
+    </states>
+
+    <layers>
+      <layer name="Idle1" x="0" y="0">
+        <frame name="fondo"></frame>
+      </layer>
+
+    </layers>
+
+    <frames>
+      <frame name="fondo" code="grad1=context.createLinearGradient(0,0,1374,766);grad1.addColorStop(0,'#000000');grad1.addColorStop(1,'#272727');context.fillStyle=grad1;context.fillRect(0,0,1390,800);" t="0"></frame>
+    </frames>
+
+
+  </spritesheet>
+
+
+  
+  </spritesheets>
